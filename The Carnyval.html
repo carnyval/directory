@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="et">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Carnyval</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+    <link rel="icon" type="image/x-icon" href="cICON.ico">
+
+        <div id="container"><div id="header" style="height: 136px;"></div>
+            <div id="headerArea">
+                
+                
+            <nav id="navbar" style="margin-bottom: 10px;"><ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="https://x.com/C4rny">Twitter</a></li>
+                <li><a href="https://ko-fi.com/c4rny">Ko-fi</a></li>
+              </ul></nav></div>
+
+            <div id="flex">
+                
+                <main>
+                    <h1><strong>The Carnyval :3</strong></h1>
+                    <p><strong>Welcome to my directory!</strong></p>
+                    <p>Hi I'm Carny and I like to draw furries.. especially rats I fucking love rats</p>
+                    <p>For my portfolio, either visit my twitter or message me on discord <strong>@carny_</strong>. Alternatively you can also <a href="https://forms.gle/cBPX4aWWqqvGZKNU7" target="_blank">fill out my form</a> if you wish to do so.</p>
+                    <p>Commission payments are either all upfront or may also be split up (50% for the slot, 50% for the final product)</p>
+
+                    <div style="text-align:center">
+  
+                        <h2>Slight artwork showcase</h2>
+  
+                        <p>Click 2 view brah</p>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="column">
+                            <img src="Arch.png" alt="Headshot" style="width:100%" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                            <img src="poptar.png" alt="Halfbody" style="width:100%" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                            <img src="dogda.png" alt="Scene" style="width:100%" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                            <img src="pikpok.png" alt="Refsheet" style="width:100%" onclick="myFunction(this);">
+                        </div>
+
+                    </div>
+                    <div class="container">
+                        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                        <img id="expandedImg" style="width:100%">
+                        <div id="imgtext"></div>
+                    </div>
+                    <script>
+                    function myFunction(imgs) {
+
+                        var expandImg = document.getElementById("expandedImg");
+                        var imgText = document.getElementById("imgtext");
+                        expandImg.src = imgs.src;
+                        imgText.innerHTML = imgs.alt;
+                        expandImg.parentElement.style.display = "block";
+                    }
+                    </script>
+
+                    
+
+
+
+
+                </main>
+                
+            <aside id="leftSidebar"><h2>Commission Slots</h2>
+            <div class="box">
+                <p>As of 24.07.2026 my comms are open! :D</p>
+                <ul style="padding-left:10px;">
+                    <li>Current slots:</li>
+                    <li>[2 out of 3]</li>
+                    <li>Always open for quotes!</li>
+                </ul>
+            </div>
+            <h3>Other socials</h3>
+            <ul>
+                <li><a href="https://toyhou.se/Carny" target="_blank">Toyhouse</a>
+                </li><li><a href="https://artfight.net/~Carnyy" target="_blank">Artfight</a></li>
+                <li>carnyvevo@gmail.com</li>
+
+            </ul></aside></div>
+            
+        <footer id="footer"></footer></div>
+        <!-- THIS IS THE CSS !-->
+        <style>
+            /* user styles */
+
+            /* styles are what change the color and sizes of stuff on your site. */
+
+            /* these are variables that are being used in the code
+    these tended to confuse some people, so I only kept 
+    the images as variables */
+
+            :root {
+                --header-image: url('https://i.pinimg.com/736x/98/11/d1/9811d1864a355a2ab35a5fd80c2ddcba.jpg');
+                --body-bg-image: url('https://i.pinimg.com/736x/54/6e/97/546e97de1ee0efe461d79fb5f06b7356.jpg');
+
+                /* colors */
+                --content: #43256E;
+            }
+
+            /* if you have the URL of a font, you can set it below */
+            /* feel free to delete this if it's not your vibe */
+
+            /* this seems like a lot for just one font and I would have to agree 
+    but I wanted to include an example of how to include a custom font.
+    If you download a font file you can upload it onto your Neocities
+    and then link it! Many fonts have separate files for each style
+    (bold, italic, etc. T_T) which is why there are so many!
+    
+    */
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-Bold.ttf');
+                font-weight: bold;
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-Italic.ttf');
+                font-style: italic;
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf');
+                font-style: italic;
+                font-weight: bold;
+            }
+
+            body {
+                font-family: 'Nunito', sans-serif;
+                margin: 0;
+                background-color: #08031A;
+                /* you can delete the line below if you'd prefer to not use an image */
+                background-size: 65px;
+                color: #1d0f09;
+                background-image: var(--body-bg-image);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            /* below this line is CSS for the layout */
+
+            /* this is a CSS comment
+    to uncomment a line of CSS, remove the * and the /
+    before and after the text */
+
+
+            /* the "container" is what wraps your entire website */
+            /* if you want something (like the header) to be Wider than
+    the other elements, you will need to move that div outside
+    of the container */
+            #container {
+                max-width: 900px;
+                /* this is the width of your layout! */
+                /* if you change the above value, scroll to the bottom
+      and change the media query according to the comment! */
+                margin: 0 auto;
+                /* this centers the entire page */
+            }
+
+            /* the area below is for all links on your page
+    EXCEPT for the navigation */
+            #container a {
+                color: #0084ff;
+                font-weight: bold;
+                /* if you want to remove the underline
+      you can add a line below here that says:
+      text-decoration:none; */
+            }
+
+            #header {
+                width: 100%;
+                background-color: #c0b49e;
+                /* header color here! */
+                height: 150px;
+                /* this is only for a background image! */
+                /* if you want to put images IN the header, 
+      you can add them directly to the <div id="header"></div> element! */
+                background-image: var(--header-image);
+                background-size: 100%;
+            }
+
+            /* navigation section!! */
+            #navbar {
+                height: 40px;
+                background-color: #e2e0c8;
+                /* navbar color */
+                width: 100%;
+            }
+
+            #navbar ul {
+                display: flex;
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+                justify-content: space-evenly;
+            }
+
+            #navbar li {
+                padding-top: 10px;
+            }
+
+            /* navigation links*/
+            #navbar li a {
+                color: #31170d;
+                /* navbar text color */
+                font-weight: 800;
+                text-decoration: none;
+                /* this removes the underline */
+            }
+
+            /* navigation link when a link is hovered over */
+            #navbar li a:hover {
+                color: hsl(12, 47%, 23%);
+                text-decoration: underline;
+            }
+
+            #flex {
+                display: flex;
+            }
+
+            /* this colors BOTH sidebars
+    if you want to style them separately,
+    create styles for #leftSidebar and #rightSidebar */
+            aside {
+                background-color: #d3c6a1;
+                width: 200px;
+                padding: 20px;
+                font-size: smaller;
+                /* this makes the sidebar text slightly smaller */
+            }
+
+
+            /* this is the color of the main content area,
+    between the sidebars! */
+            main {
+                background-color: #ece7da;
+                flex: 1;
+                padding: 20px;
+                order: 2;
+            }
+
+            /* what's this "order" stuff about??
+    allow me to explain!
+    if you're using both sidebars, the "order" value
+    tells the CSS the order in which to display them.
+    left sidebar is 1, content is 2, and right sidebar is 3! */
+
+            */ #leftSidebar {
+                order: 1;
+            }
+
+            #rightSidebar {
+                order: 3;
+            }
+
+            footer {
+                background-color: #a6be4d;
+                /* background color for footer */
+                width: 100%;
+                height: 40px;
+                padding: 10px;
+                text-align: center;
+                /* this centers the footer text */
+            }
+
+            h1,
+            h2,
+            h3 {
+                color: #289b24;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            strong {
+                /* this styles bold text */
+                color: #76d41e;
+            }
+
+            /* this is just a cool box, it's the darker colored one */
+            .box {
+                background-color: #64c424;
+                border: 1px solid #2da529;
+                padding: 10px;
+            }
+
+            /* CSS for extras */
+
+            #topBar {
+                width: 100%;
+                height: 30px;
+                padding: 10px;
+                font-size: smaller;
+                background-color: #13092D;
+            }
+
+
+            /* BELOW THIS POINT IS MEDIA QUERY */
+
+            /* so you wanna change the width of your page? 
+    by default, the container width is 900px.
+    in order to keep things responsive, take your new height,
+    and then subtrack it by 100. use this new number as the 
+    "max-width" value below
+    */
+
+            @media only screen and (max-width: 800px) {
+                #flex {
+                    flex-wrap: wrap;
+                }
+
+                aside {
+                    width: 100%;
+                }
+
+                /* the order of the items is adjusted here for responsiveness!
+      since the sidebars would be too small on a mobile device.
+      feel free to play around with the order!
+      */
+                main {
+                    order: 1;
+                }
+
+                #leftSidebar {
+                    order: 2;
+                }
+
+                #rightSidebar {
+                    order: 3;
+                }
+
+                #navbar ul {
+                    flex-wrap: wrap;
+                }
+            }
+        </style>
+
+    
+
+
+</body>
+</html>
